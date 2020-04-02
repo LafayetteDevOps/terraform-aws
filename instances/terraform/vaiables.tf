@@ -5,9 +5,16 @@ variable "aws_region" {
   default       = "us-east-1"
 }
 
+variable "type" {
+  description = "instance type"
+  type = string
+  default = "t2.micro"
+}
+
+/*
 variable "vpc_cidr" {
   description	= "cidr block"
-  type		= string
+  type		= string 
   default	= " "
 }
 
@@ -16,3 +23,4 @@ variable "vpc_id" {
   string	= string
   default	= " "
 }
+*/
