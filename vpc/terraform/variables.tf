@@ -19,6 +19,6 @@ variable "vpc_cidr" {
 
 variable "vpc_id" {
   description   = "vpc_id"
-  string        = string
+  type        = string
   default       = " "
 }
