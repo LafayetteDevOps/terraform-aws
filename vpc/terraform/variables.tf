@@ -11,6 +11,10 @@ variable "type" {
   default = "t2.micro"
 }
 
+variable "al2_ami_id" {
+  default = "ami-0fc61db8544a617ed"
+}
+
 variable "vpc_cidr" {
   description   = "cidr block"
   type          = string

@@ -6,9 +6,9 @@ resource "aws_key_pair" "key" {
 }
 
 resource "aws_instance" "ec2_instance" {
-  ami 		= "ami-0fc61db8544a617ed"
+  ami 		= var.al2_ami_id
   instance_type	= var.type
-  count = 2
+  count = 1
   key_name	= aws_key_pair.key.key_name
 
   tags = {
