@@ -3,7 +3,7 @@ data "aws_vpc" "main" {
   cidr_block	= var.vpc_cidr
 
   tags = {
-    Name	= "PLM test vpc"
+    Name	= "Test vpc"
     Environment	= var.environment
     Contact	= var.contact 
   }
@@ -15,7 +15,7 @@ resource "aws_subnet" "main" {
   cidr_block	= var.vpc_cidr
 
   tags = {
-    Name = "PLM main subnet - var.environment"
+    Name = "VPC main subnet"
   }
 }
 
@@ -23,7 +23,7 @@ resource "aws_internet_gateway" "gw" {
   vpc_id = "aws_vpc.default.id"
 
   tags = {
-    name = "PLM test deploy net gw  - var.environment"
+    name = "Test deploy net gw"
   }
 }
 
@@ -41,7 +41,7 @@ resource "aws_default_route_table" "r" {
 
 resource "aws_security_group"  "default" {
   name		= "PLM Sec Grp"
-  description	= "Security group for PLM test deployment"
+  description	= "Security group for test deployment"
   vpc_id	= "aws_vpc.main.id"
 
   ingress {
