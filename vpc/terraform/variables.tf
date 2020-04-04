@@ -1,5 +1,9 @@
 // IaC deployment variables
 
+variable "contact" {
+  default = "Chris"
+}
+
 variable "aws_region" {
   type          = string
   default       = "us-east-1"
@@ -13,6 +17,10 @@ variable "type" {
 
 variable "al2_ami_id" {
   default = "ami-0fc61db8544a617ed"
+}
+
+variable "environment" {
+  default = "development"
 }
 
 variable "vpc_cidr" {
