@@ -26,7 +26,7 @@ variable "environment" {
 variable "vpc_cidr" {
   description   = "cidr block"
   type          = string
-  default       = " "
+  default       = "172.16.0.0/16"
 }
 
 variable "vpc_id" {
