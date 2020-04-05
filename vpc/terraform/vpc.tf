@@ -40,7 +40,7 @@ resource "aws_default_route_table" "r" {
 }
 
 resource "aws_security_group"  "default" {
-  name		= "PLM Sec Grp"
+  name		= "Test Sec Grp"
   description	= "Security group for test deployment"
   vpc_id	= aws_vpc.main.id
 
@@ -48,14 +48,14 @@ resource "aws_security_group"  "default" {
     from_port 	= 22
     to_port 	= 22
     protocol 	= "tcp"
-    cidr_blocks = ["10.173.44.0/22"]
+    cidr_blocks = ["172.16.0.0/16"]
   }
 
   ingress {
     from_port 	= 80
     to_port 	= 80
     protocol 	= "tcp"
-    cidr_blocks = ["10.173.44.0/22"]
+    cidr_blocks = ["172.16.0.0/16"]
   }
 
   egress {
